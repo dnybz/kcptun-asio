@@ -6,8 +6,8 @@
 #define KCPTUN_UTILS_H
 
 #include <algorithm>
-#include <arpa/inet.h>
 #include <asio.hpp>
+#include <asio/steady_timer.hpp>
 #include <assert.h>
 #include <cstdio>
 #include <cstdlib>
@@ -17,28 +17,35 @@
 #include <iostream>
 #include <iterator>
 #include <list>
+#include <map>
 #include <memory>
 #include <random>
 #include <stddef.h>
 #include <stdint.h>
 #include <streambuf>
 #include <string>
-#include <sys/time.h>
 #include <system_error>
 #include <tuple>
 #include <type_traits>
-#include <unistd.h>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
+#include <chrono>
 
 #include "encoding.h"
-#include "logger.h"
+//#include "logger.h"
+
+#if defined(WIN32)
+#else
+#include <arpa/inet.h>
+#include <sys/time.h>
+#include <unistd.h>
+#endif
 
 enum { nonce_size = 16, crc_size = 4 };
 enum { mtu_limit = 1500 };
-
+/*
 #if __cplusplus < 201402L
 // support make_unique in c++ 11
 namespace std {
@@ -62,9 +69,31 @@ make_unique(Args &&...) = delete;
 }
 
 #endif
-
+*/
 using Handler = std::function<void(std::error_code, std::size_t)>;
 using OutputHandler = std::function<void(char *, std::size_t, Handler)>;
+
+#ifdef WIN32
+inline int
+gettimeofday(struct timeval *tp, void *tzp)
+{
+	time_t clock;
+	struct tm tm;
+	SYSTEMTIME wtm;
+	GetLocalTime(&wtm);
+	tm.tm_year = wtm.wYear - 1900;
+	tm.tm_mon = wtm.wMonth - 1;
+	tm.tm_mday = wtm.wDay;
+	tm.tm_hour = wtm.wHour;
+	tm.tm_min = wtm.wMinute;
+	tm.tm_sec = wtm.wSecond;
+	tm.tm_isdst = -1;
+	clock = mktime(&tm);
+	tp->tv_sec = clock;
+	tp->tv_usec = wtm.wMilliseconds * 1000;
+	return (0);
+}
+#endif
 
 static void itimeofday(long *sec, long *usec) {
     struct timeval time;

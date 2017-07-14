@@ -1,0 +1,1 @@
+kcptun_server.exe -c "server-config.json"

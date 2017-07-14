@@ -5,6 +5,16 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS}")
 
+include_directories(./ ./third_party/asio/include ./third_party/ ./third_party/snappy-1.1.5)
+add_definitions(-DASIO_STANDALONE
+        -DASIO_HAS_STD_ARRAY
+        -DASIO_HAS_CSTDINT
+        -DASIO_HAS_STD_ADDRESSOF
+        -DASIO_HAS_STD_SHARED_PTR
+        -DASIO_HAS_STD_TYPE_TRAIT)
+
+link_directories(./lib)
+
 set(SOURCE_FILES
         ikcp.c
         ikcp.h
@@ -34,9 +44,7 @@ set(SOURCE_FILES
 	reedsolomon.cpp
 	reedsolomon.h
         async_fec.cpp
-        async_fec.h
-        logger.h
-        logger.cpp)
+        async_fec.h)
 
 set(KCPTUN_CLIENT_SOURCE_FILES ${SOURCE_FILES} 
         kcptun_client_main.cpp
@@ -53,11 +61,15 @@ set(KCPTUN_SERVER_SOURCE_FILES ${SOURCE_FILES}
         server.h)
 
 add_executable(kcptun_client ${KCPTUN_CLIENT_SOURCE_FILES})
-target_link_libraries(kcptun_client pthread)
-target_link_libraries(kcptun_client cryptopp)
+if (UNIX)
+    target_link_libraries(kcptun_client pthread)
+endif (UNIX)
+target_link_libraries(kcptun_client cryptlib)
 target_link_libraries(kcptun_client snappy)
 
 add_executable(kcptun_server ${KCPTUN_SERVER_SOURCE_FILES})
-target_link_libraries(kcptun_server pthread)
-target_link_libraries(kcptun_server cryptopp)
+if (UNIX)
+    target_link_libraries(kcptun_client pthread)
+endif (UNIX)
+target_link_libraries(kcptun_server cryptlib)
 target_link_libraries(kcptun_server snappy)

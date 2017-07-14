@@ -26,10 +26,14 @@
 
 #include "fec.h"
 #include "encoding.h"
-#include <err.h>
 #include <iostream>
 #include <stdexcept>
+#include "utils.h"
+#ifdef WIN32
+#else
+#include <err.h>
 #include <sys/time.h>
+#endif
 
 static inline uint32_t currentMs() {
     struct timeval time;

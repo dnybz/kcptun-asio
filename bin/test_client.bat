@@ -1,0 +1,1 @@
+kcptun_client.exe -c "client-config.json"

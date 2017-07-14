@@ -4,7 +4,7 @@
 #include "server.h"
 
 void print_configs() {
-    info("listening on: %s\n"
+    printf("listening on: %s\n"
          "encryption: %s\n"
          "nodelay parameters: %d %d %d %d\n"
          "remote address: %s\n"
