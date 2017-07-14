@@ -2,6 +2,8 @@
 
 一个基于 ASIO/C++11 实现的 kcptun,与 [kcptun(golang)](https://github.com/xtaci/kcptun) 完全兼容  
 
+2017/7/14 移除BOOST 库依赖，支持VS2015编译
+
 # 目前进度  
 
 * kcp 协议数据收发  
