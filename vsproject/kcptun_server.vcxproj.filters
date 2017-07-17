@@ -1,46 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="G:\kcptun\kcptun-asio\ikcp.c">
+    <ClCompile Include="..\ikcp.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\sess.cpp">
+    <ClCompile Include="..\sess.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\smux.cpp">
+    <ClCompile Include="..\smux.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\encrypt.cpp">
+    <ClCompile Include="..\encrypt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\config.cpp">
+    <ClCompile Include="..\config.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\snappy_stream.cpp">
+    <ClCompile Include="..\snappy_stream.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\fec.cpp">
+    <ClCompile Include="..\fec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\inversion_tree.cpp">
+    <ClCompile Include="..\inversion_tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\matrix.cpp">
+    <ClCompile Include="..\matrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\reedsolomon.cpp">
+    <ClCompile Include="..\reedsolomon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\async_fec.cpp">
+    <ClCompile Include="..\async_fec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\kcptun_server_main.cpp">
+    <ClCompile Include="..\kcptun_server_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\kcptun_server.cpp">
+    <ClCompile Include="..\kcptun_server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="G:\kcptun\kcptun-asio\server.cpp">
+    <ClCompile Include="..\server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\galois.cpp">
@@ -54,55 +54,55 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="G:\kcptun\kcptun-asio\ikcp.h">
+    <ClInclude Include="..\ikcp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\sess.h">
+    <ClInclude Include="..\sess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\utils.h">
+    <ClInclude Include="..\utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\frame.h">
+    <ClInclude Include="..\frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\smux.h">
+    <ClInclude Include="..\smux.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\encrypt.h">
+    <ClInclude Include="..\encrypt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\config.h">
+    <ClInclude Include="..\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\snappy_stream.h">
+    <ClInclude Include="..\snappy_stream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\fec.h">
+    <ClInclude Include="..\fec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\galois.h">
+    <ClInclude Include="..\galois.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\galois_noasm.h">
+    <ClInclude Include="..\galois_noasm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\inversion_tree.h">
+    <ClInclude Include="..\inversion_tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\matrix.h">
+    <ClInclude Include="..\matrix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\reedsolomon.h">
+    <ClInclude Include="..\reedsolomon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\async_fec.h">
+    <ClInclude Include="..\async_fec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\kcptun_server.h">
+    <ClInclude Include="..\kcptun_server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\kcptun\kcptun-asio\server.h">
+    <ClInclude Include="..\server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
